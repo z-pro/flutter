@@ -16,4 +16,11 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 # flutter
 山寨项目"小寓优品"
->>>>>>> 8f3523ac1d5036a3e6267ee3d273f8e384cf95e2
+
+
+![](shortcut/a.jpg)
+![](shortcut/b.jpg)
+![](shortcut/c.jpg)
+![](shortcut/d.jpg)
+![](shortcut/e.jpg)
+![](shortcut/f.jpg)
