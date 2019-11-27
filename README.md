@@ -15,7 +15,7 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 # flutter
-山寨项目"小寓优品"
+山寨项目"小寓优品" #仅供学习使用，不喜勿喷lol
 
 
 ![](shortcut/a.jpg)
