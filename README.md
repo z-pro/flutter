@@ -24,3 +24,5 @@ samples, guidance on mobile development, and a full API reference.
 ![](shortcut/d.jpg)
 ![](shortcut/e.jpg)
 ![](shortcut/f.jpg)
+
+#what a happy ending
