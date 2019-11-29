@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:xyyp/consts/global_config.dart';
 import 'package:xyyp/ui/page/notice/notice_center_page.dart';
@@ -27,13 +28,20 @@ class _BusinessPage extends State<BusinessPage> {
               child: new Container(
                 child: new Text(""),
               )),
-          IconButton(icon: Icon(Icons.add_alert),
-            onPressed: (){
-              Navigator.of(context).push(new MaterialPageRoute(
-                  builder:(context)=>new NoticeCenterPage()
-              ));
-            },
-            )
+          Badge(
+            badgeContent: Text('',style: TextStyle(color: Colors.white),),
+            shape: BadgeShape.circle,
+            animationType: BadgeAnimationType.slide,
+            child: IconButton(icon: Icon(Icons.add_alert),
+              onPressed: (){
+                Navigator.of(context).push(new MaterialPageRoute(
+                    builder:(context)=>new NoticeCenterPage()
+                ));
+              },
+            ),
+            position: BadgePosition.topRight(right:5,top: 0),
+          )
+
         ],
       ),
     );
