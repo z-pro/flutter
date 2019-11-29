@@ -5,6 +5,7 @@ import 'package:toast/toast.dart';
 import 'package:xyyp/consts/base_const.dart';
 import 'package:xyyp/consts/global_config.dart';
 import 'package:xyyp/event/login_event.dart';
+import 'package:xyyp/generated/i18n.dart';
 import 'package:xyyp/ui/page/common/webview_page.dart';
 import 'package:xyyp/ui/page/mine/user_login_page.dart';
 import 'package:xyyp/ui/page/notice/notice_center_page.dart';
@@ -170,8 +171,8 @@ class _MinePage extends State<MinePage> {
             animType: AnimType.BOTTOMSLIDE,
             tittle: '确定退出吗？亲',
             desc: '',
-            btnOkText: "确定",
-            btnCancelText: "取消",
+            btnOkText: S.of(context).actionConfirm,
+            btnCancelText: S.of(context).actionCancel,
             btnCancelOnPress: () {},
             btnOkOnPress: () {
               UserAccountUtil.clearLoginInfo();

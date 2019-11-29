@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:xyyp/consts/global_config.dart';
+import 'package:xyyp/generated/i18n.dart';
 import 'package:xyyp/ui/page/business/business_page.dart';
 import 'package:xyyp/ui/page/mine/mine_page.dart';
 import 'package:xyyp/ui/page/workbench/workbench_page.dart';
@@ -47,6 +49,12 @@ class _MyApp extends State<MyApp> {
         theme: GlobalConfig.themeData,
         debugShowCheckedModeBanner: false,
         title: "小寓优品",
+        localizationsDelegates: const [
+          S.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+        ],
+        supportedLocales: S.delegate.supportedLocales,
         home: Scaffold(
           /* appBar: AppBar(title: Text("业务中心"),
         //actions: <Widget>[IconButton(icon:Icon( Icons.menu),)],
