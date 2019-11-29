@@ -5,6 +5,8 @@ import 'package:xyyp/consts/global_config.dart';
 import 'package:xyyp/ui/page/order/order_item.dart';
 import 'package:xyyp/ui/widget/bottom_line.dart';
 import 'package:xyyp/ui/widget/emptyview.dart';
+import 'package:xyyp/ui/widget/order_skeleton_item.dart';
+import 'package:xyyp/ui/widget/skeleton.dart';
 
 class OrderListPage extends StatefulWidget {
   final String title;
@@ -26,7 +28,7 @@ class _OrderListPage extends State<OrderListPage> with AutomaticKeepAliveClientM
   Future _getDataList() async {
     //_refreshIndicatorKey.currentState?.show();
     //模拟网络延迟
-    await Future.delayed(const Duration(seconds: 1), () {
+    await Future.delayed(const Duration(seconds: 2), () {
       listTotalSize = 13;
       setState(() {
         showMore = false;
@@ -63,13 +65,15 @@ class _OrderListPage extends State<OrderListPage> with AutomaticKeepAliveClientM
       return EmptyView();
     }
     if (listData == null || listData.length <= 0) {
-      return Center(
-        child: CircularProgressIndicator(),
+      return SkeletonList(
+        builder: (context, index) => OrderSkeletonItem(),
       );
+     /* return Center(
+        child: CircularProgressIndicator(),
+      );*/
     }
     return RefreshIndicator(
         //key: _refreshIndicatorKey,
-
         color: GlobalConfig.jiangRoomYellow,
         onRefresh: _pullToRefresh,
         child: ListView.builder(
